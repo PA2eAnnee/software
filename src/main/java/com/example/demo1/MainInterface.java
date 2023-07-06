@@ -646,7 +646,5 @@ public class MainInterface extends Application {
         return gsonBuilder.create();
     }
 
-    public static void main(String[] args) {
-        launch(args);
-    }
+
 }
