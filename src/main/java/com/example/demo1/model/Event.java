@@ -6,7 +6,7 @@ import java.time.LocalDateTime;
 public class Event {
     private int id;
     private String description;
-    private int type;
+    private String type;
     private int maxMembers;
     private int price;
 
@@ -18,7 +18,7 @@ public class Event {
 
     private int recipe_id;
 
-    public Event(int id, String description, int type, int maxMembers, int price, LocalDateTime startDate, LocalDateTime endDate, int siteId) {
+    public Event(int id, String description, String type, int maxMembers, int price, LocalDateTime startDate, LocalDateTime endDate, int siteId) {
         this.id = id;
         this.description = description;
         this.type = type;
@@ -46,11 +46,11 @@ public class Event {
         this.description = description;
     }
 
-    public int getType() {
+    public String getType() {
         return type;
     }
 
-    public void setType(int type) {
+    public void setType(String type) {
         this.type = type;
     }
 

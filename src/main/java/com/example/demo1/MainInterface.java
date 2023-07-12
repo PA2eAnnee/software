@@ -228,7 +228,13 @@ public class MainInterface extends Application {
                 chart.setVisible(true);
                 updateChartDiplome();
             });
+        }else if (labelText.equals("Quitter l'application")) {
+            label.setOnMouseClicked(event -> {
+                System.exit(0);
+            });
+
         }
+
 
 
 
@@ -496,8 +502,8 @@ public class MainInterface extends Application {
                     String responseString = response2.body().string();
                     Gson gson = createCustomGson(); // Utiliser la méthode pour créer une instance de Gson avec la désérialisation personnalisée
                     JsonObject jsonObject = gson.fromJson(responseString, JsonObject.class);
-                    if (jsonObject.has("users")) {
-                        ArrayList<Ticket> ticketslist = gson.fromJson(jsonObject.get("users"), new TypeToken<ArrayList<Ticket>>() {
+                    if (jsonObject.has("tickets")) {
+                        ArrayList<Ticket> ticketslist = gson.fromJson(jsonObject.get("tickets"), new TypeToken<ArrayList<Ticket>>() {
                         }.getType());
                         ticketList.addAll(ticketslist);
                         result2.set(true);

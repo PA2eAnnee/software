@@ -80,6 +80,7 @@ public class LoginInterface extends Application {
             JsonObject jsonObject = new JsonObject();
             jsonObject.addProperty("email", email);
             jsonObject.addProperty("password", password);
+            jsonObject.addProperty("origin", "software");
 
             // Convertir l'objet JSON en une chaîne JSON
             String json = new Gson().toJson(jsonObject);
